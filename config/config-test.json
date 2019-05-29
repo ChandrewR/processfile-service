@@ -1,0 +1,21 @@
+{
+  "environment": "development",
+  "dburl": "mongodb://127.0.0.1:27017/outreach-reports-test",
+  "hydra": {
+    "serviceName": "processfile-service",
+    "serviceIP": "",
+    "servicePort": 64888,
+    "serviceType": "processfile",
+    "serviceDescription": "Process excel file and inserts data into mongodb",
+    "redis": {
+      "url": "127.0.0.1",
+      "port": 6379,
+      "db": 15
+    },
+    "externalRoutes" : {
+      "https://test-service.com" : ["/processfileapis/v1/getfilestatus"]
+    }
+    
+  }
+  
+}
